@@ -79,7 +79,8 @@
                                                         ${parAct.joueurs.size()}
                                                     </div>
                                                     <div class="large20 floatRight">
-                                                        <a href="<c:url value="/LoginServlet"/>?idPartie=${parAct.id}">
+                                                        
+                                                        <a href="<c:url value="/LoginServlet"/>?idPartie=${parAct.id}">  
                                                             <input type="button" value="Rejoindre"  >
                                                         </a>
                                                     </div>

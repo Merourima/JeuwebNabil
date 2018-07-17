@@ -41,7 +41,9 @@
                             </div>
                         </div>
                         <div>
+                            <a href="<c:url value="/JouerPartie"/>">
                             <input class="btnSubmit btnSubREjoindrePartie" type="button" value="Démarrer">
+                            </a>
                         </div>
                         <div class = "fullLarge" >
                             <br/><br/><br/><br/><br/><br/><br/><br/>
