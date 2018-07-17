@@ -39,7 +39,7 @@ public class listePartieServlet extends HttpServlet {
         
         Partie p = servicePartie.creerNouvellePartie(nompartie);
         
-        resp.sendRedirect("/listePartieServlet");
+        resp.sendRedirect("listePartieServlet");
     }
     
     @Override

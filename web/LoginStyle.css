@@ -7,14 +7,27 @@ and open the template in the editor.
     Created on : 16 juil. 2018, 10:02:15
     Author     : Administrateur
 */
+.body{
+        /*background: no-repeat fixed center;*/
+	/*background-color:#383627;*/
+	background-image: url("image/76061.jpg") ;
+}
 
 .loginBox{
     width: 60%;
     margin: 0 auto;
     display: block;
     margin-top: 100px;
-    border: 1px solid ;
+    /*border: 1px solid ;*/
+    text-align: center;
    
+}
+
+.fullLargeLogin{
+
+	width: 100%;
+	display: inline-block; 
+	
 }
 .loginBox h1{
     text-align: center;
@@ -44,14 +57,14 @@ and open the template in the editor.
     font-size: 20px;
     color: #6f216f;
 }
-.styleinput{
+/*.styleinput{
     margin: 0 auto;
     display: block;
     padding: 5px 20px;
     margin-bottom: 30px;
     border-radius: 20px;
     border: 1px solid purple;
-}
+}*/
 .btnSubREjoindrePartie{
     display: block;
     margin: 0 auto;
@@ -72,4 +85,9 @@ and open the template in the editor.
     border: 1px solid purple;
     color: purple;
     
-} 
+}
+
+.form-check img {
+    width: 90px;
+    height: 90px;
+}
