@@ -9,10 +9,10 @@ and open the template in the editor.
 */
 
 
-body{
+/*body{
 	background-color: #383627;
         background-image:url("image/76061.jpg");
-}
+}*/
 .mainBox{
 
 	display: inline-block;
@@ -20,7 +20,7 @@ body{
 	margin-left: 10%;
 	padding-top: 10%;
 	height: 800px;
-	background-image: url("image/wood2-photo.jpeg");
+	/*background-image: url("image/wood2-photo.jpeg");*/
 	/*background: center;*/
         /*background-color:  black;*/
 	border: 1px solid blue;
@@ -28,7 +28,11 @@ body{
 }
 .center{
 	width: 80%;
-	margin: auto;
+	margin: 0 auto;
+        display: block;
+        margin-top: 100px;
+    /*border: 1px solid ;*/
+    text-align: center;
 }
 
 .joueurBox{

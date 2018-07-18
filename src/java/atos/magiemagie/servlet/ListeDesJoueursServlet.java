@@ -24,15 +24,14 @@ import javax.servlet.http.HttpServletResponse;
  * @author Administrateur
  */
 @WebServlet(name = "ListeDesJoueursServlet", urlPatterns = {"/ListeDesJoueursServlet"})
-public class ListeDesJoueursServlet extends HttpServlet {
+    public class ListeDesJoueursServlet extends HttpServlet {
+    private PartieService partieService = new  PartieService();
     
-    private JoueurService jrserv = new JoueurService();
-    private PartieService parserv = new PartieService();
-    private PartieDAO partiedao = new PartieDAO();
+    
 
-    
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
         req.getRequestDispatcher("lister-joueur.jsp").forward(req, resp);
         
     }

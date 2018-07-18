@@ -25,19 +25,6 @@
 
             <div    style="width: 79%; display: inline-block;" >
                 <div class = "mainBox arrondi  imgBackDiv">
-
-                    <!--<div class="fullLarge ">
-                            <div class=" large40">
-                                    <img src="images.jpg" style="width:100px ;height:100px;border: 1px solid #342435;">
-                            </div>
-                            
-                            <div class="large25">
-                                    <p> <b> Pseudo: </b></p>
-                            </div>
-                            <div class="large25"> 
-                                    <p> pseudo </p>  
-                            </div>
-                    </div>-->
                     <div class="fullLarge " >
 
                     </div>
@@ -76,7 +63,7 @@
                                     </div>
 
                                     <div class="large15 libelle"> 
-                                        <span>${parAct.joueurs.size()}</span> 
+                                        <span>${parAct.joueurs.size()} Joueurs</span> 
                                     </div>
                                     <div class="large20 floatRight">
 
@@ -95,12 +82,6 @@
 
                     </div>
                 </div>
-
-                <!-- <div style="width: 10%; display: inline-block; background-color: green;">
-                        
-                </div>
-                -->
-
             </div>
 
     </body>

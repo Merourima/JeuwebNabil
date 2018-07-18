@@ -11,7 +11,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="styleListePartie.css" val="text/css" rel="stylesheet">
-        <title>JSP Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+        <title> Liste Joueur </title>
     </head>
     <body>
         <div  style="text-align: center; ">
@@ -24,22 +25,26 @@
                     </div>
 
 
-                    <div class = "fullLarge">
+                    <div class = "fullLarge design">
+                        
                         <div class="textStyle"> 
                             <h1>Liste Des joueur de la partie </h1>
                         </div>
+                        
                         <div class = "fullLarge ">
-                            <div class = "fullLarge design arrondi listePartie">
-                                
-                                <c:forEach items="${listeDesJoueurDePartie}" var="jr">
+                            <c:forEach items="${listeDesJoueurDePartie}" var="jr">  
+                                <div class = "fullLarge design arrondi listePartie">
+                                    <div class="large15 libelle">  
+                                        <span> ${jr.pseudo}</span>
+                                    </div>
                                     
-                                    <p> ${jr.pseudo}</p>
-                                    <p> ${jr.cartes.size()}</p>
-                                    
-                                </c:forEach>    
-                                 
-                            </div>
+<!--                                    <div class="large15 libelle">
+                                        <span> {jr.cartes.size()} Cartes</span>   
+                                    </div>    -->
+                                </div>
+                            </c:forEach>  
                         </div>
+                        
                         <div>
                             <a href="<c:url value="/JouerPartie"/>">
                             <input class="btnSubmit btnSubREjoindrePartie" type="button" value="Démarrer">

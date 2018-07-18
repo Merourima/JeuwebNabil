@@ -4,6 +4,29 @@ body{
 	background-color:#383627;
 	background-image: url("image/76061.jpg");
 }
+
+.joueurBox{
+	border-color:blue;
+	border-radius: 30px;
+	border: 1px solid #fcc245;
+	float: left;
+	margin-left: 20px;
+	width: 15%;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+}
+.avatar img{
+	border-radius: 50%;
+	border: 1px solid blue;
+	width: 100px !important;
+	height: 100px;
+}
+
+.joueurBox:hover{
+	transform: scale(1,2);
+}
 .design input[type=submit],.design input[type=button]{
 	border: none;
         background: linear-gradient(#FDD470,#D49739);
@@ -32,10 +55,10 @@ body{
      text-decoration: none;
  }
  .avatar img{
- 	 border-radius: 50%;
- 	  height: 100px;
-    width: 100px !important;
-    float: left;
+     border-radius: 50%;
+     height: 100px;
+     width: 100px !important;
+     float: left;
  }
 .mainexterieur{
 	padding: 5px 5px;

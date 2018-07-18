@@ -11,30 +11,68 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="styleJouer.css">
+	<link href="styleJouer.css" val="text/css" rel="stylesheet">
+        <link href="styleListePartie.css" val="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
 	<title></title>
 </head>
-<body>
-		<div class="mainBox">
-			<div class="center">
-			<div class="joueurBox avatar">
+ <body>
+        <div  style="text-align: center; ">
+
+            <div    style="width: 79%; display: inline-block;" >
+                <div > 
+                    <!--class = ""mainBox arrondi  imgBackDiv-->
+
+                    <div class="fullLarge " >
+
+                    </div>
+
+
+                    <div class = "fullLarge design">
+                        <div class = "fullLarge ">
                             <c:forEach items="${listeDesJoueurDePartie}" var="jr">
-				<table>
-					<tr>
-						<td><img  src="image/sorciВre.jpg" alt="Avatar"></td>
-					</tr>
-					<tr>
-						<td class="libellé"><label>${jr.pseudo}</label></td>
-					</tr>
-					<tr>
-						<td  class="libellé"><label>5 Cartes</label></td>
-					</tr>
-				</table>
+                                <div class=" avatar joueurBox">  
+                                    <table>
+                                        <tr>
+                                            <td><img  src="" alt="Avatar"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="libellé"><label>${jr.pseudo}</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td  class="libellé"><label>${jr.getCartes().size()} Cartes</label></td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </c:forEach>
-			</div>
-			
-			
-			</div>
-		</div>
-</body>
+                        </div>
+                        
+                        <div class = "fullLarge" >
+                            <div class = "fullLarge ">
+                                <a> <input class="floatRight" type="button" value="Lancer Sort"></a><br>
+                            </div>
+                            <div class = "fullLarge ">
+                                <a> <input class="floatRight" type="button" value="Passer Tour"></a>
+                            </div>
+
+                        </div>
+                        
+                        <div class="fullLarge">
+                            
+                            
+                        </div>
+
+                        <div class = "fullLarge" >
+                            <br/><br/><br/><br/><br/><br/><br/><br/>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+    </body>
 </html>
