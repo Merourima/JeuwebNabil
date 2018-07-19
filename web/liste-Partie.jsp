@@ -13,7 +13,7 @@
         <link >
         <meta charset="UTF-8">
         <title> Liste Des Parties </title>
-        <link href="styleListePartie.css" type="text/css" rel="stylesheet">
+        <link href="css/styleListePartie.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
     </head>
 

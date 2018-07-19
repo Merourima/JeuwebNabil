@@ -2,7 +2,7 @@ body{
 
     background: no-repeat fixed center;
     background-color:#383627;
-    background-image: url("image/76061.jpg");
+    background-image: url("../image/76061.jpg");
 }
 
 .joueurBox{
@@ -11,6 +11,18 @@ body{
     float: left;
     margin-left: 20px;
     width: 15%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgba(0, 138, 255, 0.25);
+
+}
+.carteBox{
+    border-radius: 30px;
+    border: 1px solid #fcc245;
+    float: left;
+    margin-left: 20px;
+    width: 80%;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;

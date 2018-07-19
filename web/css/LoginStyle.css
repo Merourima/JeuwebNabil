@@ -10,7 +10,7 @@ and open the template in the editor.
 .body{
         /*background: no-repeat fixed center;*/
 	/*background-color:#383627;*/
-	background-image: url("image/76061.jpg") ;
+	background-image: url("../image/76061.jpg") ;
 }
 
 .loginBox{

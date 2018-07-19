@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="refresh" content="5" />
-        <link href="styleListePartie.css" val="text/css" rel="stylesheet">
+        <link href="css/styleListePartie.css" val="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
         <title> Liste Joueurs </title>
     </head>

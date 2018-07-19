@@ -9,13 +9,14 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-        <link href="styleListePartie.css" val="text/css" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/card.css" type="text/css" rel="stylesheet">
+        <link href="css/styleListePartie.css" val="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
-	<title></title>
-</head>
- <body>
+        <title></title>
+    </head>
+    <body>
         <div  style="text-align: center; ">
 
             <div    style="width: 79%; display: inline-block;" >
@@ -28,28 +29,28 @@
 
 
                     <div class = "fullLarge design">
-                        
+
                         <div class = "fullLarge ">
-                             <c:forEach items="${partie.getJoueurs()}" var="jr"> 
+                            <c:forEach items="${partie.getJoueurs()}" var="jr"> 
                                 <c:if test = "${jr.id != moi.id}">
-                               
+
                                     <div class=" avatar joueurBox">  
-                                    <table>
-                                        <tr>
-                                            <td><img  src="image/avatar/${jr.avatar}.jpeg" alt="Avatar"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="libelle"><span>${jr.pseudo}</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td  class="libelle"><span>${jr.getCartes().size()} Cartes</span></td>
-                                        </tr>
-                                    </table>
-                                </div>
+                                        <table>
+                                            <tr>
+                                                <td><img  src="image/avatar/${jr.avatar}.jpeg" alt="Avatar"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="libelle"><span>${jr.pseudo}</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td  class="libelle"><span>${jr.getCartes().size()} Cartes</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </c:if>
                             </c:forEach>  
                         </div>
-                        
+
                         <div class = "fullLarge" >
                             <div class = "fullLarge ">
                                 <a> <input class="floatRight" type="button" value="Lancer Sort"></a><br>
@@ -59,27 +60,33 @@
                             </div>
 
                         </div>
-                        
+
                         <div class="fullLarge">
-                                <div class=" avatar joueurBox">  
-                                    <table>
-                                        <tr>
-                                            <td><img  src="image/avatar/${moi.avatar}.jpeg" alt="Avatar"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="libelle"><span>Moi</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td  class="libelle"><span>${moi.getCartes().size()} Cartes</span></td>
-                                        </tr>
-                                    </table>
-                                        <div class="libelle">
-                                             <c:forEach items="${moi.getCartes()}" var="carte">
-                                                 <span>${carte.getTypeIngredient()}</span>
-                                            </c:forEach>
-                                        </div>
-                                           
-                                </div>
+                            <div class=" avatar joueurBox">  
+                                <table>
+                                    <tr>
+                                        <td><img  src="image/avatar/${moi.avatar}.jpeg" alt="Avatar"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="libelle"><span>Moi</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td  class="libelle"><span>${moi.getCartes().size()} Cartes</span></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                            <div class="playingCards avatar carteBox">
+                                <ul class="table">
+                                    <c:forEach items="${moi.getCartes()}" var="carte">
+                                    <li>
+                                        <a class="card ${carte.getTypeIngredient()} itemCard" href="#">
+                                            <span class="rank">${carte.getTypeIngredient()}</span>
+                                        </a>
+                                    </li>
+                                     </c:forEach>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class = "fullLarge" >

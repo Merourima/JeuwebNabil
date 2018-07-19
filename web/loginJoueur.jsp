@@ -15,8 +15,8 @@
         <meta charset="UTF-8">
         <title> Log IN </title>
 
-<link href="LoginStyle.css" type="text/css" rel="stylesheet">
-<link href="styleListePartie.css" type="text/css" rel="stylesheet">
+<link href="css/LoginStyle.css" type="text/css" rel="stylesheet">
+<link href="css/styleListePartie.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
     </head>
 

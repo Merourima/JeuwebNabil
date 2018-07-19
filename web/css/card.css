@@ -1,0 +1,67 @@
+.playingCards .card {
+    display: inline-block;
+   width: 90px;
+height: 130px;
+    border: 1px solid #666;
+    border-radius: .3em;
+    padding: .25em;
+    margin: 0 .5em .5em 0;
+    text-align: center;
+    font-size: 11px; /* @change: adjust this value to make bigger or smaller cards */
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: rgba(0, 138, 255, 0.25);
+}
+
+.playingCards a.card {
+    text-decoration: none;
+}
+/* selected and hover state */
+.playingCards a.card:hover, .playingCards a.card:active, .playingCards a.card:focus,
+.playingCards label.card:hover,
+.playingCards strong .card {
+    bottom: 1em;
+}
+.playingCards label.card {
+    cursor: pointer;
+}
+
+.playingCards ul.table{
+    list-style-type: none;
+    padding-left: 10px;
+     padding-right: 10px;
+    position: relative;
+    clear: both;
+}
+
+.playingCards ul.table li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+}
+
+.card.MANDRAGORE  { 
+    background-image: url(../image/carte/MANDRAGORE.jpg);
+}
+.card.CHAUVE_SOURIS  { 
+    background-image: url(../image/carte/CHAUVE_SOURIS.jpg);
+}
+.card.LICORNE  { 
+    background-image: url(../image/carte/LICORNE.jpg);
+}
+.card.LAPIS_LAZULI  { 
+    background-image: url(../image/carte/LAPIS_LAZULI.jpg);
+}
+.card.CRAPAUD  { 
+    background-image: url(../image/carte/CRAPAUD.jpg);
+}
+.card.itemCard{
+background-repeat: no-repeat;
+background-size: 90px 145px;
+}
+
+.playingCards .card .rank {
+    display: block;
+}
