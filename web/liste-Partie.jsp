@@ -36,7 +36,7 @@
                         <div class="large60 design libelle floatRight">
                             <form method="post" action="listePartieServlet">
                                 <div class="sameLine"><span> Créer une partie </span></div>
-                                <div class="sameLine"><input  type="text" name="nomPartie" placeholder="Nom de la partie"></div>
+                                <div class="sameLine"><input  type="text" name="nomPartie" placeholder="Nom de la partie" required></div>
                                 <div class="sameLine"><input type="submit" value="Créer"></div>
                             </form>
 

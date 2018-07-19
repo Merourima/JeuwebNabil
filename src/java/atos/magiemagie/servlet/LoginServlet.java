@@ -11,8 +11,6 @@ import atos.magiemagie.entity.Partie;
 import atos.magiemagie.service.JoueurService;
 import atos.magiemagie.service.PartieService;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,25 +36,28 @@ public class LoginServlet extends HttpServlet {
         String avatar = req.getParameter("radio");
         
         Long idPartie = (Long) req.getSession().getAttribute("idPartie");
-        
+        System.out.println("doPost LoginServlet");
         //********************************************
         
         Joueur joueur = joueurservice.rejoindrePartie(pseudo, idPartie, avatar);
         req.getSession().setAttribute("moi", joueur);
         
         Partie p = partiedao.rechercherParID(idPartie);
-        List<Joueur> jrDeLaPartie = p.getJoueurs();
-        req.getSession().setAttribute("listeDesJoueurDePartie", jrDeLaPartie);
+        req.getSession().setAttribute("partie", p);
         
         // ?????????????????????  Tester avant si nbrJR > 2  ???????????????????
-        resp.sendRedirect("lister-joueur.jsp");
+        resp.sendRedirect("ListeDesJoueursServlet");
     }
     
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-        Long idPartie = Long.parseLong(req.getParameter("idPartie"));
+        String param = req.getParameter("idPartie");
+        if(param == null){
+            resp.sendRedirect("listePartieServlet");
+        }
+        Long idPartie = Long.parseLong(param);
         req.getSession().setAttribute("idPartie", idPartie);
+        System.out.println("doGet LoginServlet");
         req.getRequestDispatcher("loginJoueur.jsp").forward(req, resp);
         
     }

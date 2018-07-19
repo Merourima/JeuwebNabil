@@ -5,12 +5,10 @@
  */
 package atos.magiemagie.servlet;
 
-import atos.magiemagie.entity.Joueur;
 import atos.magiemagie.entity.Partie;
 import atos.magiemagie.service.JoueurService;
 import atos.magiemagie.service.PartieService;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,6 +34,7 @@ public class listePartieServlet extends HttpServlet {
         
         //créer une partie
         String nompartie = req.getParameter("nomPartie");
+        System.out.println("doPost listePartieServlet");
         
         Partie p = servicePartie.creerNouvellePartie(nompartie);
         
@@ -46,7 +45,7 @@ public class listePartieServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         List<Partie> listPartNonDem = servicePartie.listerPartieNonDemarrees();
-        
+        System.out.println("doGet listePartieServlet");
         //Long idpartie = jrServ 
         req.setAttribute("listeParNoDema", listPartNonDem);
         req.getRequestDispatcher("liste-Partie.jsp").forward(req, resp);

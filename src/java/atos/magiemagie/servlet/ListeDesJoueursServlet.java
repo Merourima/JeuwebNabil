@@ -6,13 +6,9 @@
 package atos.magiemagie.servlet;
 
 import atos.magiemagie.dao.PartieDAO;
-import atos.magiemagie.entity.Joueur;
 import atos.magiemagie.entity.Partie;
-import atos.magiemagie.service.JoueurService;
 import atos.magiemagie.service.PartieService;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,13 +22,26 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ListeDesJoueursServlet", urlPatterns = {"/ListeDesJoueursServlet"})
     public class ListeDesJoueursServlet extends HttpServlet {
     private PartieService partieService = new  PartieService();
-    
+    private PartieDAO partiedao = new PartieDAO();
     
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Object obj = req.getSession().getAttribute("partie");
+        if(obj == null){
+            resp.sendRedirect("listePartieServlet");
+        }else {
+         Partie partie = (Partie) obj;
+         partie = partiedao.rechercherParID(partie.getId());              
+        req.getSession().setAttribute("partie", partie);
+         if(partie.isPartieDemarre()){
+             resp.sendRedirect("JouerPartie");
+         }else {
+             req.getRequestDispatcher("lister-joueur.jsp").forward(req, resp);
+         }
         
-        req.getRequestDispatcher("lister-joueur.jsp").forward(req, resp);
+        }
+        
         
     }
 }

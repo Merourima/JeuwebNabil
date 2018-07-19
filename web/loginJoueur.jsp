@@ -28,7 +28,7 @@
             <h1>Connectez-vous</h1>
             <form method="POST" action="LoginServlet">
                 <div class="fullLargeLogin"><span>Pseudo</span> </div>
-                <div class="fullLargeLogin"><input type="text" name="pseudo"/> </div>
+                <div class="fullLargeLogin"><input type="text" name="pseudo" required/> </div>
                 <div class="fullLargeLogin">
                     <div class="blocAvatar imgstyle spaceDiv">
                         <div class="form-check">

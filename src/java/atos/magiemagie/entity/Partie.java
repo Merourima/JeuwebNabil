@@ -67,6 +67,19 @@ public class Partie implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+    
+    public boolean isPartieDemarre(){
+        boolean isPartieDemarre = false;
+        if(joueurs != null){
+            for (Joueur joueur : joueurs) {
+                if(Joueur.EtatJoueur.A_LA_MAIN.equals(joueur.getEtatjoueur())){
+                    isPartieDemarre = true;
+                    break;
+                }
+            }
+        }
+        return isPartieDemarre;
+    }
 
     
 
