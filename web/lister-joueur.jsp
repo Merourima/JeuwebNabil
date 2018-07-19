@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="styleListePartie.css" val="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
-        <title> Liste Joueur </title>
+        <title> Liste Joueurs </title>
     </head>
     <body>
         <div  style="text-align: center; ">
@@ -28,7 +28,7 @@
                     <div class = "fullLarge design">
                         
                         <div class="textStyle"> 
-                            <h1>Liste Des joueur de la partie </h1>
+                            <h1>Liste Des joueurs de la partie </h1>
                         </div>
                         
                         <div class = "fullLarge ">

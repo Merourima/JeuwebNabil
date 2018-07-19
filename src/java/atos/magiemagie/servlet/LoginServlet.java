@@ -41,7 +41,9 @@ public class LoginServlet extends HttpServlet {
         
         //********************************************
         
-        joueurservice.rejoindrePartie(pseudo, idPartie, avatar);
+        Joueur joueur = joueurservice.rejoindrePartie(pseudo, idPartie, avatar);
+        req.getSession().setAttribute("moi", joueur);
+        
         Partie p = partiedao.rechercherParID(idPartie);
         List<Joueur> jrDeLaPartie = p.getJoueurs();
         req.getSession().setAttribute("listeDesJoueurDePartie", jrDeLaPartie);

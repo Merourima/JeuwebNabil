@@ -29,12 +29,14 @@
 
 
                     <div class = "fullLarge design">
+                        
                         <div class = "fullLarge ">
                             <c:forEach items="${listeDesJoueurDePartie}" var="jr">
+                                <c:if test="${jr.id != moi.id}" >
                                 <div class=" avatar joueurBox">  
                                     <table>
                                         <tr>
-                                            <td><img  src="" alt="Avatar"></td>
+                                            <td><img  src="image/avatar/${jr.avatar}.jpeg" alt="Avatar"></td>
                                         </tr>
                                         <tr>
                                             <td class="libellé"><label>${jr.pseudo}</label></td>
@@ -44,6 +46,7 @@
                                         </tr>
                                     </table>
                                 </div>
+                                </c:if>        
                             </c:forEach>
                         </div>
                         
@@ -58,8 +61,16 @@
                         </div>
                         
                         <div class="fullLarge">
-                            
-                            
+                                <div class="large5 avatar libelle">
+                                    <table>
+                                        <tr>
+                                            <td><img  src="image/avatar/${moi.avatar}.jpeg" alt="Avatar" style="width:200px"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="libelle"><label>${moi.pseudo}</label></td>
+                                        </tr>
+                                    </table>
+                                </div>
                         </div>
 
                         <div class = "fullLarge" >

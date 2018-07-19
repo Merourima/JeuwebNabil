@@ -31,12 +31,7 @@
 
                     <div class = "fullLarge " >
                         <div class="large5 avatar libelle">
-                            <table>
-                                <tr>
-                                    <td><img src="image/8593b69631698b1b6268a52d83b27020.jpg" alt="Avatar" style="width:200px"></td>
-                                    <td><p> Rima </p></td>
-                                </tr>
-                            </table>
+                            
                         </div>
                         <div class="large60 design libelle floatRight">
                             <form method="post" action="listePartieServlet">
